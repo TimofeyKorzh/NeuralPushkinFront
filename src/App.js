@@ -14,7 +14,7 @@ import { postGenerateTextEndpoint } from './utils';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
-
+import MetaTags from 'react-meta-tags';
 const TITLE = 'Neural Pushkin';
 
 function App() {
@@ -74,7 +74,12 @@ function App() {
   <MuiThemeProvider theme ={THEME}>
   
   <div className='app-container'>
-  
+        <MetaTags>
+            <title>Neural Pushkin</title>
+            <meta name="description" content="Simple web-interface to Neural Pushkin" />
+            <meta property="og:title" content="Neural Pushkin" />
+            <meta property="og:image" content="npushkin.jpg" />
+          </MetaTags>
   
       
     <form noValidate autoComplete='off'>

@@ -14,6 +14,7 @@ import { postGenerateTextEndpoint } from './utils';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
+import { YMInitializer } from 'react-yandex-metrika';
 
 const TITLE = 'Neural Pushkin';
 
@@ -75,6 +76,11 @@ function App() {
   
   <div className='app-container'>
   
+      
+        
+    <YMInitializer accounts={[83274316]} options={{webvisor: true}} />
+        
+      
       
     <form noValidate autoComplete='off'>
       <h1>Neural Pushkin</h1>

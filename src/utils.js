@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const ENDPOINT_URL = "http://api.pushkin.monetka.name/push";
+const ENDPOINT_URL = "https://api.pushkin.monetka.name/push";
 
 const useAsyncEndpoint = fn => {
     const [res, setRes] = React.useState({ data: null, complete: false, pending: false, error: false });

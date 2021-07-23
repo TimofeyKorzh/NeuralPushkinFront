@@ -80,6 +80,7 @@ function App() {
       <h1>Neural Pushkin</h1>
       <img src="npushkin.jpg" width="250" height="250" alt="Neural Pushkin"></img>
       <p>Мы вышли в стадию открытого бета-тестирования!<br></br> Начните писать ниже, а нейросеть продолжит...</p>
+      <p>!ВНИМАНИЕ! Сейчас сервер находится под интенсивной нагрузкой и генерация может длится вплоть до часа!</p>
       <Typography id="discrete-slider"  > Уровень креативности </Typography>
       <Slider
         defaultValue={1}
@@ -104,6 +105,8 @@ function App() {
         <p>Благодарим за информационную поддержку <a href="https://t.me/NeuralShit">NeuralShit</a>, <a href="https://t.me/denissexy">DenisSexyIt</a></p>
 
         <p>Neural Pushkin in <a href="https://twitter.com/NeuralPushkin">Twitter</a></p>
+        <p>Сбор средств на <a href="https://www.tinkoff.ru/sl/6Nv1r2nsuiQ">лучшие сервера</a> для Пушкина</p>
+        
   </div>
   </MuiThemeProvider>
 );

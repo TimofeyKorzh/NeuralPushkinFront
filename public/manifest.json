@@ -1,6 +1,6 @@
 {
-  "short_name": "SB-Writer",
-  "name": "Simple interface to ponyfiction GPT-2",
+  "short_name": "Neural Pushkin",
+  "name": "Simple web-interface to Neural Pushkin",
   "icons": [
     {
       "src": "favicon.ico",

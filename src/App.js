@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import { makeStyles } from '@material-ui/core/styles';
 
-const TITLE = 'Neural pushkin';
+const TITLE = 'Neural Pushkin';
 
 function App() {
   const [toggle, setToggle] = useState(false);

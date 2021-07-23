@@ -53,12 +53,12 @@ function App() {
 
   const generateText = () => {
     generatedText.complete = false;
-    postGenerateText({ text, model, userId: 1 });
+    postGenerateText({ text, temperature});
     setToggle(false);
   }
 
   if (generatedText.complete && !generatedText.error && !toggle){
-    setText(text+generatedText.data.result);
+    setText(generatedText.data.text);
     setToggle(true);
   }
 
@@ -98,12 +98,7 @@ function App() {
     {generatedText.pending &&
       <div className='result pending'>Подождите!</div>}
 
-    {generatedText.complete &&
-      (generatedText.error ?
-        <div className='result error'>Неизвестная ошибка запроса</div> :
-        <div className='result valid'>
-          {generatedText.data.result}
-        </div>)}
+    
         <p>Created by <a href="https://t.me/datapron">Alex Wortega</a>, <a href="https://t.me/def_model_train">Arina Puсhkova</a></p>
         <p>Благодарим за информационную поддержку <a href="https://t.me/NeuralShit">NeuralShit</a>, <a href="https://t.me/denissexy">DenisSexyIt</a></p>
 

@@ -20,7 +20,7 @@ const TITLE = 'Neural Pushkin';
 
 function App() {
   const [toggle, setToggle] = useState(false);
-  const [text, setText] = useState("Заходит Пушкин в магазин купить шляпу а она ему");
+  const [text, setText] = useState("Заходит Пушкин в магазин купить шляпу, а она ему");
   const [temperature, setTemperature] = useState(1);
   //const [model, setModel] = useState('gpt2');
   const model = "345M";

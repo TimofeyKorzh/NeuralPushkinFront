@@ -113,7 +113,7 @@ function App() {
         <div className='centering'>
         <p>Created by <a href="https://t.me/datapron">Alex Wortega</a>, <a href="https://t.me/def_model_train">Arina Puсhkova</a></p>
         <p>Front by <a href="https://github.com/TimofeyKorzh">Timofey Korzhebin</a></p>
-        <p>Благодарим за информационную поддержку <br></br><a href="https://t.me/NeuralShit">NeuralShit</a>, <a href="https://t.me/denissexy">DenisSexyIt</a>, <a href="https://t.me/DeepFaker">DeepFake</a></p>
+        <p>Благодарим за информационную поддержку <br></br><a href="https://t.me/NeuralShit">NeuralShit</a>, <a href="https://t.me/denissexy">DenisSexyIt</a>, <a href="https://t.me/DeepFaker">Deepfaker</a></p>
 
         <p>Neural Pushkin in <a href="https://twitter.com/NeuralPushkin">Twitter</a></p>
         </div>

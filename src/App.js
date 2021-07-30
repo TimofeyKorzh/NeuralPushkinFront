@@ -1,10 +1,3 @@
-/*import React, { useState } from 'react';
-import Button from './components/Button';
-import SelectBox from './components/SelectBox';
-import TextBox from './components/TextBox';
-import './styles.scss';
-import { postGenerateTextEndpoint } from './utils';
-*/
 import { TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import Button from './components/Button';
@@ -66,8 +59,6 @@ function App() {
 
   function valuetext(value) {
     setTemperature(value);
-    //console.log(temperature)
-    //return `${value}°C`;
   }
 
   const classes = useStyles();

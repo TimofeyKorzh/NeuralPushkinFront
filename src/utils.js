@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const ENDPOINT_URL = "https://api.pushkin.monetka.name/push";
+const ENDPOINT_URL = "https://api.pushkin.monetka.name/push";//куда делается запрос
 
 const useAsyncEndpoint = fn => {
     const [res, setRes] = React.useState({ data: null, complete: false, pending: false, error: false });
@@ -25,7 +25,7 @@ const useAsyncEndpoint = fn => {
 export const postGenerateTextEndpoint = () => {
     /* eslint-disable react-hooks/rules-of-hooks */
     
-    return useAsyncEndpoint(data => ({ url: ENDPOINT_URL, method: "GET", params : {text: data.text, temp: data.temperature}}));
+    return useAsyncEndpoint(data => ({ url: ENDPOINT_URL, method: "GET", params : {text: data.text, temp: data.temperature}}));//Гет-запрос на сервер
    /* return axios.get(data => (ENDPOINT_URL, {
         params: {
           text: data.text,

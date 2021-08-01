@@ -13,10 +13,8 @@ const TITLE = 'Neural Pushkin';
 
 function App() {
   const [toggle, setToggle] = useState(false);
-  const [text, setText] = useState("Заходит Пушкин в магазин купить шляпу, а она ему");
-  const [temperature, setTemperature] = useState(1);
-  //const [model, setModel] = useState('gpt2');
-  const model = "345M";
+  const [text, setText] = useState("Заходит Пушкин в магазин купить шляпу, а она ему"); // установка текста по умолчанию
+  const [temperature, setTemperature] = useState(0.1);//установка температуры по умолча
   const [generatedText, postGenerateText] = postGenerateTextEndpoint();
 
 
@@ -27,7 +25,7 @@ function App() {
   });
 
   const handleChange = (event) => {
-    setText(event.target.value);
+    setText(event.target.value); //обновление текста
   };
 
   useEffect(() => {
@@ -53,12 +51,12 @@ function App() {
 
   if (generatedText.complete && !generatedText.error && !toggle){
     setText(generatedText.data.text);
-    setToggle(true);
+    setToggle(true);// обновление текста при получение ответа от сервера
   }
 
 
   function valuetext(value) {
-    setTemperature(value);
+    setTemperature(value); //установка температуры со слайдера
   }
 
   const classes = useStyles();
@@ -101,7 +99,7 @@ function App() {
     {generatedText.pending &&
       <div className='result pending'>Подождите!</div>}
 
-        <div className='centering'>
+        <div className='centering'> 
         <p>Created by <a href="https://t.me/datapron">Alex Wortega</a>, <a href="https://t.me/def_model_train">Arina Puсhkova</a></p>
         <p>Front by <a href="https://github.com/TimofeyKorzh">Timofey Korzhebin</a></p>
         <p>Благодарим за информационную поддержку <br></br><a href="https://t.me/NeuralShit">NeuralShit</a>, <a href="https://t.me/denissexy">DenisSexyIt</a>, <a href="https://t.me/DeepFaker">Deepfaker</a></p>

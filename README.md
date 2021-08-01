@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project structure
 
-`/public/` - public resourses.
-`/src/App.js` - main application.  
-`/src/utils.js` - async requests to backend.  
+`/public/` - public resourses.<br>
+`/src/App.js` - main application.<br>  
+`/src/utils.js` - async requests to backend.<br>  
 
 ## Installation
 

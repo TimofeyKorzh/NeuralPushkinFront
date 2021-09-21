@@ -74,7 +74,7 @@ function App() {
     <form noValidate autoComplete='off'>
     <div className='centering'></div>
       <h1>Neural Pushkin</h1>
-      <img src="npushkin.jpg" width="250" height="250" alt="Neural Pushkin"></img>
+      <img src="npushkin2.jpg" width="250" height="250" alt="Neural Pushkin"></img>
       
       <p>Мы вышли в стадию открытого бета-тестирования!<br></br> Начните писать ниже, а нейросеть продолжит...</p>
       <p>Сбор средств на <a href="https://www.tinkoff.ru/sl/6Nv1r2nsuiQ">лучшие сервера</a> для Пушкина</p>

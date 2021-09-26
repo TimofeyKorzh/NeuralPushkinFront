@@ -5,10 +5,12 @@
 @font-face {
   font-family: 'MinionPro';
   src: local('Minion'), url(fonts/Minion.ttf) format('truetype');
-  font-family: 'bikham';
+  
+}
+@font-face {
+font-family: 'bikham';
   src: local('bikham'), url(fonts/MTCORSVA.TTF) format('truetype');
 }
-
 @media screen and (max-width: 768px) {
   html {
     height: 100vh;

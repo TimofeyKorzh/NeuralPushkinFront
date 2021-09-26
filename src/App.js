@@ -102,8 +102,8 @@ function App() {
 
   const THEME = createMuiTheme({
     typography: {
-     "fontFamily": `"bikham", sans-serif`,
-     "fontSize": 20,
+     "fontFamily": `"bikham","MinionPro",  sans-serif`,
+     "fontSize": 17,
      "fontWeightLight": 300,
      "fontWeightRegular": 400,
      "fontWeightMedium": 500
@@ -186,9 +186,12 @@ function App() {
       </AppBar>
       <TabPanel value={value} index={0}>
       <div class="centering">
+      <font face = "bakhim">
       <TextField className='form textinput ' label="Название стиха..."  onChange={handleName} />
       <p><div className="post__content" dangerouslySetInnerHTML={{__html: poem}}></div></p>
+      
       <Button onClick={generatePoem} />
+      </font>
       </div>
       </TabPanel>
       <TabPanel value={value} index={1}>

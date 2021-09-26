@@ -103,7 +103,7 @@ function App() {
   const THEME = createMuiTheme({
     typography: {
      "fontFamily": `"bikham","MinionPro",  sans-serif`,
-     "fontSize": 17,
+     "fontSize": 16,
      "fontWeightLight": 300,
      "fontWeightRegular": 400,
      "fontWeightMedium": 500

@@ -186,7 +186,7 @@ function App() {
       </AppBar>
       <TabPanel value={value} index={0}>
       <div class="centering">
-      <TextField className='form textinput ' label="Введите название стиха..."  onChange={handleName} />
+      <TextField className='form textinput ' label="Название стиха..."  onChange={handleName} />
       <p><div className="post__content" dangerouslySetInnerHTML={{__html: poem}}></div></p>
       <Button onClick={generatePoem} />
       </div>

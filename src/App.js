@@ -129,7 +129,7 @@ function App() {
   }
 
   if (generatedPoem.complete && !generatedPoem.error && !togglePoem){
-    setPoem(generatedPoem.data.text.split("poem:start")[1].replace(/(\r\n|\n|\r)/gm, "<br/>"));
+    setPoem(generatedPoem.data.text.split("poem:start")[1]);
     setTogglePoem(true);
   }
 
@@ -184,9 +184,10 @@ function App() {
       </AppBar>
       <TabPanel value={value} index={0}>
       <div class="centering">
-      <font face = "bakhim">
+      <font face = "MinionPro">
       <TextField className='form textinput ' label="Название стиха..."  onChange={handleName} />
-      <p><div className="post__content" dangerouslySetInnerHTML={{__html: poem}}></div></p>
+      
+      <Typography  style={{whiteSpace: 'pre-line', fontSize:20 }}>{poem}</Typography>
       
       <Button onClick={generatePoem} />
       </font>

@@ -74,3 +74,7 @@ form {
   justify-content: center;
 }
 
+.poemtext {
+  font-family: 'MinionPro';
+  src: local('Minion'), url(fonts/Minion.ttf) format('truetype');
+}

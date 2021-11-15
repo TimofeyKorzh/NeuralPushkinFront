@@ -1,6 +1,6 @@
 import { TextField } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import Button from './components/Button';
+import Button from '@material-ui/core/Button'
 import {MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './styles.scss';
 import { postGenerateTextEndpoint } from './utils';
@@ -15,8 +15,15 @@ import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import PropTypes from "prop-types";
+import  Grid from '@material-ui/core/Grid';
+import { IconButton } from '@material-ui/core';
+import Autorenew from '@material-ui/icons/Autorenew';
+import CircularProgress from '@material-ui/core/CircularProgress'
+import { withStyles } from '@material-ui/core/styles'
+
 
 const TITLE = 'Neural Pushkin';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,6 +80,39 @@ function App() {
   const [generatedPoem, postGeneratePoem] = postGeneratePoemEndpoint();
 
   const [value, setValue] = React.useState(0);
+
+
+  const styles = {
+    root: {
+      marginLeft: 5
+    }
+  }
+  const SpinnerAdornment = withStyles(styles)(props => (
+    <CircularProgress
+      className={props.classes.spinner}
+      size={10}
+      style={{marginLeft: "0.5em"}}
+    />
+  ))
+  const AdornedButton = (props) => {
+    const {
+      children,
+      loading,
+      ...rest
+    } = props
+    return (
+      <Button size="large" style={{ marginTop: '1em', marginBottom: '1em', width: 'fit-content', paddingBottom: '2em', backgroundColor: 'transparent'}}
+  
+      color="primary"
+      {...rest}>
+         
+        {children}
+        {loading && <SpinnerAdornment  {...rest} />}
+        
+      </Button>
+    )
+  }
+
 
   function handleTab(event, newValue) {
     setValue(newValue);
@@ -189,20 +229,21 @@ function App() {
       
       <Typography  style={{whiteSpace: 'pre-line', fontSize:20 }}>{poem}</Typography>
       
-      <Button onClick={generatePoem} />
+      <AdornedButton onClick={generatePoem} loading = {generatedPoem.pending}>Допушкинизировать</AdornedButton>
       </font>
       </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <TextField className='form textinput' multiline fullWidth value={text} onChange={handleChange} />
-      <Button onClick={generateText} />
+      <Box textAlign='center'>
+      <AdornedButton onClick={generateText} loading = {generatedText.pending}>Допушкинизировать</AdornedButton>
+      </Box>
       </TabPanel>
      
       
     </form>
 
-    {(generatedText.pending || generatedPoem.pending)  &&
-      <div className='result pending'>Подождите!</div>}
+   
 
         <div className='centering'> 
         <p>Created by <a href="https://t.me/lovedeathtransformers">Alex Wortega</a>, <a href="https://t.me/def_model_train">Arina Puсhkova</a></p>

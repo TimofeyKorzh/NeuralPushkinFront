@@ -193,6 +193,7 @@ function App() {
     <div className='centering'>
       <h1>Neural Pushkin</h1>
       <img src="npushkin2.jpg" width="250" height="250" alt="Neural Pushkin"></img>
+      <h1>САЙТ ВРЕМЕННО НЕ РАБОТАЕТ ПО ТЕХНИЧЕСКИМ ПРИЧИНАМ</h1>
       </div>
       
       <Typography id="discrete-slider"  > Уровень креативности </Typography>
@@ -229,14 +230,15 @@ function App() {
       
       <Typography  style={{whiteSpace: 'pre-line', fontSize:20 }}>{poem}</Typography>
       
-      <AdornedButton onClick={generatePoem} loading = {generatedPoem.pending}>Допушкинизировать</AdornedButton>
+      
       </font>
       </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <TextField className='form textinput' multiline fullWidth value={text} onChange={handleChange} />
+      
       <Box textAlign='center'>
-      <AdornedButton onClick={generateText} loading = {generatedText.pending}>Допушкинизировать</AdornedButton>
+      
       </Box>
       </TabPanel>
      
